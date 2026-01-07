@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./app/storage/application/VRCS_favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VR Consultancy and Services</title>
+
+    <link meta="icon" rel="apple-touch-icon" sizes="180x180" href="">
+    <link meta="icon" rel="icon" type="image/png" sizes="32x32" href="">
+    <link meta="icon" rel="icon" type="image/png" sizes="16x16" href="">
+    <link meta="icon" rel="shortcut icon" type="image/x-icon" href="">
+    <meta name="theme-color" content="#000000" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" crossorigin src="./assets/index-6NHkQpqh.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bh76j7cs.css">
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const card = document.getElementById('interactive-card');
+        const canvas = document.getElementById('bg-canvas');
+
+        card.addEventListener('mousemove', (e) => {
+            // Get card boundaries
+            const rect = card.getBoundingClientRect();
+
+            // Calculate mouse position relative to the card (%)
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+            // Update CSS variables for the radial gradient
+            canvas.style.setProperty('--mouse-x', `${x}%`);
+            canvas.style.setProperty('--mouse-y', `${y}%`);
+        });
+
+        // Reset position when mouse leaves
+        card.addEventListener('mouseleave', () => {
+            canvas.style.transition = '0.5s';
+            canvas.style.setProperty('--mouse-x', `50%`);
+            canvas.style.setProperty('--mouse-y', `50%`);
+        });
+    });
+</script>
+
+<body>
+    <div id="root">
+        <nav class="d-block text-light w-100 top-nav">
+            <div class="container-lg">
+                <div class="d-flex gap-2 py-2">
+                    <div class="border-end border-white border-2 pe-2"><a href="tel:9106532035"
+                            class="text-decoration-none text-light fs-6"><i class="fa fa-phone me-2"></i><small
+                                class="d-none d-md-inline-block"> 9106532035</small></a></div>
+                    <div class=""><a href="mailto:vrcs.desk@gmail.com" class="text-decoration-none text-light"><i
+                                class="fa fa-envelope-open me-2"></i><small
+                                class="d-none d-md-inline-block">vrcs.desk@gmail.com</small></a></div>
+                    <div class="offset-2 d-flex align-items-center me-0 ms-auto social-size gap-3">
+                        <ul class="m-0 p-0 list-unstyled d-flex gap-3">
+                            <li class="me-2"><a class="cart-icon d-none d-md-block" data-count="0" href="/cart"
+                                    data-discover="true"><i class="fa fa-cart-shopping"></i></a></li>
+                            <li class=""><a href="https://www.twitter.com" rel="noreferrer" target="_blank"
+                                    class="text-light text-decoration-none"><i class="fa-brands fa-twitter "></i></a>
+                            </li>
+                            <li class=""><a href="https://www.facebook.com" rel="noreferrer" target="_blank"
+                                    class="text-light text-decoration-none"><i class="fa-brands fa-facebook "></i></a>
+                            </li>
+                            <li class=""><a href="https://www.instagram.com" rel="noreferrer" target="_blank"
+                                    class="text-light text-decoration-none"><i class="fa-brands fa-instagram "></i></a>
+                            </li>
+                            <li class=""><a href="https://www.linkdin.com" rel="noreferrer" target="_blank"
+                                    class="text-light text-decoration-none"><i class="fa-brands fa-linkedin "></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="fixed-top-custom py-0 navbar navbar-expand-md navbar-light fixed-top">
+            <div class="container-lg pb-0 pb-lg-0"><a class="navbrand pe-4 navbar-brand" href="./index.html"
+                    data-discover="true"><img src="./app/storage/application/VRCS_logo.png" alt="Adiyogi Fintech"></a>
+                <div class="d-flex d-md-none align-items-center gap-4 justify-content-end" style="min-width: 135px;"><a
+                        class="btn btn-outline-primary btn-icon  cart-icon text-primary" data-count="0" href="/cart"
+                        data-discover="true"><i class="fa fa-cart-shopping"></i></a><button
+                        aria-controls="responsive-navbar-nav" type="button" aria-label="Toggle navigation"
+                        class="navbar-toggler collapsed"><span class="navbar-toggler-icon"></span></button></div>
+                <div class="navbar-collapse collapse" id="responsive-navbar-nav">
+                    <div class="me-auto gap-0 gap-md-4 navbar-nav">
+                        <div class="nav-item"><a class="nav-link py-2 py-lg-0  nav-link" href="./index.html"
+                                data-discover="true">Home</a></div>
+                        <div class="nav-item"><a class="nav-link py-2 py-lg-0 active nav-link" href="./about.html"
+                                data-discover="true">About us</a></div>
+                        <div class="nav-item"><a class="nav-link py-2 py-lg-0  nav-link" href="./services.html"
+                                data-discover="true">Our Services</a></div>
+                        <div class="nav-item"><a class="nav-link py-2 py-lg-0  nav-link" href="./contact.html"
+                                data-discover="true">Contact</a></div>
+                    </div>
+                    <!-- <div class="d-flex gap--2 mb-2 mb-md-0">
+                        <div class="me-2 dropdown"><button type="button" id="dropdown-login" aria-expanded="false"
+                                class="px-4 dropdown-toggle btn btn-orange">Login</button></div>
+                        <div class="dropdown"><button type="button" id="dropdown-register" aria-expanded="false"
+                                class="px-4 dropdown-toggle btn btn-orange">Register</button></div>
+                    </div> -->
+                </div>
+            </div>
+        </nav>
+        <main>
+            <section class="contact-us bg-dark contactback">
+                <div class="container-fluid banner-breadcrumb">
+                    <div class="col-12 text-center">
+                        <h3 class="text-white">About</h3>
+                    </div>
+                    <div class="col-12 text-center"><img src="img/line.png" alt="" class="pt-2"></div>
+                    <div class="col-12 mt-3">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb d-flex justify-content-center">
+                                <li class="breadcrumb-item"><a class="orange text-decoration-none" href="/home"
+                                        data-discover="true">Home</a></li>
+                                <li class="breadcrumb-item active text-white" aria-current="page">About</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <div>
+                <section class="container About-section2">
+                    <div class="row py-lg-5"></div>
+                    <div class="row">
+                        <div class="col-lg-6 col-12 pt-3">
+                            <img src="img/team.jpg" class="img-thumbnail float-lg-end About-sec2-img" alt="">
+                        </div>
+                        <div class="col-lg-6 col-12 pt-3">
+                            <div class="who-wrapper">
+                                <h3 class="fw-bolder mb-4 text-md-center text-lg-start About-sec2-h">
+                                    We are <spna style="color: blueviolet;">Proffessional &Trust worthy </spna> <br>
+                                    organization.
+                                </h3>
+                                <p class="About-sec2-font mb-3 About-sec2-font">At VR Consultancy & Services, we believe
+                                    that navigating the complexities of government documentation and business compliance
+                                    should be seamless, not stressful. Founded on the principles of precision and
+                                    integrity, we have evolved into Navsari’s premier destination for comprehensive
+                                    consultancy and job search solutions. With over three years of dedicated expertise,
+                                    our journey is built on a foundation of local trust and a commitment to excellence.
+
+                                    We have successfully served a growing community of 500+ satisfied clients, providing
+                                    a bridge between intricate official procedures and the people who need them. In an
+                                    era where regulations are constantly in flux, our team remains at the forefront,
+                                    proactively monitoring government updates to ensure your applications—be it GST,
+                                    ITR, PAN, or EPFO—are always compliant with the latest legal frameworks. We aren't
+                                    just a service provider; we are your strategic partners in navigating the
+                                    administrative landscape of modern India.</p>
+                                <input type="button" value="Get A Quote"
+                                    class="btn rounded-pill About-sec2-btn text-white py-2 px-4 fw-bold">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section class="container About-section2">
+                    <div class="row py-lg-5"></div>
+                    <div class="row">
+                        <div class="col-lg-6 col-12 pt-3">
+                            <div class="who-wrapper">
+                                <h3 class="fw-bolder mb-4 text-md-center text-lg-start About-sec2-h">
+                                    Our <spna style="color: blueviolet;">Vision & Mission</spna> <br>
+                                </h3>
+                                <p class="About-sec2-font mb-3 About-sec2-font">
+                                    <spna style="color: blueviolet;">Vision</spna> : To become the most trusted
+                                    digital bridge for government and employment services in Gujarat, empowering every
+                                    citizen and business owner with the tools to navigate official compliance with zero
+                                    friction and absolute confidence.
+                                </p>
+
+                                <p class="About-sec2-font mb-3 About-sec2-font">
+                                    <spna style="color: blueviolet;">Mission</spna> : Our mission is to simplify
+                                    life for our clients by providing accurate,
+                                    real-time, and affordable consultancy. We aim to eliminate the "paperwork headache"
+                                    through a smart, agile team that prioritizes transparency, speed, and 100% legal
+                                    accuracy. We strive to stay ahead of the curve, adapting to every government change
+                                    so that our clients never have to worry about the "fine print" again.
+                                </p>
+                                <input type="button" value="Get A Quote"
+                                    class="btn rounded-pill About-sec2-btn text-white py-2 px-4 fw-bold">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 pt-3">
+                            <img src="img/vision.jpg" class="img-thumbnail float-lg-end About-sec2-img" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="diversity-section py-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10">
+                                <div class="epic-diversity-card" id="interactive-card">
+                                    <div id="bg-canvas"></div>
+
+                                    <div class="diversity-content text-center">
+                                        <h2 class="fw-bold mb-4 text-gradient">Diversity of Our Services</h2>
+                                        <p class="lead text-light mb-4">
+                                            What sets <strong>VR Consultancy & Services</strong> apart is our
+                                            high-performance ecosystem of solutions.
+                                            We bridge the gap between complex official procedures and your essential
+                                            needs in Navsari.
+                                        </p>
+                                        <div class="services-grid">
+                                            <span><i class="fas fa-check-circle me-2"></i>Identity
+                                                (PAN/Voter/Passport)</span>
+                                            <span><i class="fas fa-check-circle me-2"></i>Taxation (GST/ITR
+                                                Filing)</span>
+                                            <span><i class="fas fa-check-circle me-2"></i>Compliance (MSME/FSSAI)</span>
+                                            <span><i class="fas fa-check-circle me-2"></i>Finance (EPFO/Banking)</span>
+                                            <span><i class="fas fa-check-circle me-2"></i>Careers (Job
+                                                Consultancy)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="team-section py-5 bg-light">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <h2 class="fw-bold text-dark">Meet Our Expert Team</h2>
+                            <p class="text-muted">The smart, strong, and agile minds behind VR Consultancy & Services.
+                            </p>
+                        </div>
+
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <div class="founder-card shadow-lg">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-md-5 founder-img-box">
+                                            <img src="./img/rahulProfile.jpeg" alt="Founder of VRCS" class="img-fluid">
+                                        </div>
+                                        <div class="col-md-7 p-lg-5 p-4">
+                                            <span class="badge bg-primary mb-2">Founder & Lead Consultant</span>
+                                            <h2 class="fw-bold">Name of Founder</h2>
+                                            <p class="lead text-primary mb-3">3+ Years of Excellence in Government
+                                                Liaison</p>
+                                            <p class="text-muted">
+                                                With a vision to simplify government compliance for the citizens of
+                                                Navsari,
+                                                Rahul Vishwakarma established VRCS to bridge the gap between complex
+                                                official
+                                                procedures and the common man. Dedicated to solving every documentation
+                                                hurdle
+                                                with speed and 100% legal accuracy.
+                                            </p>
+                                            <div class="social-links mt-4">
+                                                <a href="#" class="btn btn-sm btn-outline-dark me-2"><i
+                                                        class="fab fa-linkedin"></i></a>
+                                                <a href="#" class="btn btn-sm btn-outline-dark"><i
+                                                        class="fab fa-twitter"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="team-mini-card text-center p-4 shadow-sm h-100">
+                                    <h5 class="fw-bold mb-1">Nitin Vishwakarma</h5>
+                                    <p class="text-primary small fw-bold mb-3">Operations Manager & Cofounder</p>
+                                    <p class="text-muted small">A Software delvelop and marketing professional</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="team-mini-card text-center p-4 shadow-sm h-100">
+                                    <h5 class="fw-bold mb-1">Bipin Vishwakarma</h5>
+                                    <p class="text-primary small fw-bold mb-3">Operations Manager & Cofounder</p>
+                                    <p class="text-muted small">A specilist for Job seraching and Guidence provider for
+                                        Students</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="team-mini-card text-center p-4 shadow-sm h-100">
+                                    <h5 class="fw-bold mb-1">Mayuri</h5>
+                                    <p class="text-primary small fw-bold mb-3">Career Strategist and Planer</p>
+                                    <p class="text-muted small">Helping clients with Job Search Consultancy and
+                                        professional resumes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="certifications-section py-5 bg-white">
+                    <div class="container">
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-lg-8 text-center">
+                                <h2 class="fw-bold text-dark">Verified Excellence & Trust</h2>
+                                <p class="text-muted mt-3 lead">
+                                    Your security is our priority. As a professionally recognized consultancy, we
+                                    maintain strict adherence to industry standards and legal protocols. Our
+                                    certifications from leading fintech and government-authorized bodies prove our
+                                    commitment to providing 100% authentic and transparent services to the Navsari
+                                    community.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                                <div class="cert-card">
+                                    <div class="cert-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h6>ADIYOGI FINTECH PRIVATE LIMITED</h6>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                                <div class="cert-card">
+                                    <div class="cert-icon">
+                                        <i class="fas fa-file-contract"></i>
+                                    </div>
+                                    <h6>ISO 9001:2015 Certified</h6>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                                <div class="cert-card">
+                                    <div class="cert-icon">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                    <h6>MSME Udyam Registered</h6>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                                <div class="cert-card">
+                                    <div class="cert-icon">
+                                        <i class="fas fa-id-card"></i>
+                                    </div>
+                                    <h6>Authorized NSDL Partner</h6>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                                <div class="cert-card">
+                                    <div class="cert-icon">
+                                        <i class="fas fa-check-double"></i>
+                                    </div>
+                                    <h6>GST Practitioner Verified</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="d-flex justify-content-center my-5">
+                    <div class="vrcs-premium-contact-card">
+                        <div class="card-accent-line"></div>
+                        <h5 class="fw-bold mb-4 text-center">Reach Our Service Desk</h5>
+
+                        <a href="mailto:vrcs.desk@gmail.com" class="contact-row mb-3 text-decoration-none">
+                            <div class="icon-box">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <small>Official Email</small>
+                                <span>vrcs.desk@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="tel:+919106532035" class="contact-row text-decoration-none">
+                            <div class="icon-box">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <small>Direct Helpline</small>
+                                <span>+91 9106532035</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="container-fluid">
+            <div class="row bg-footer text-white  myborder p-lg-5 p-md-4 p-4 ps-2 myfooter">
+                <div class="col-lg-3 col-md-6 col-12"><img src="./app/storage/application/VRCS_Footer_Logo2.png"
+                        alt="Adiyogi Fintech" class="imgclass">
+                    <p class="footer-logo-text"> </p><br>
+                    <ul class="d-flex align-items-center ulc1 p-0">
+                        <li>Follow us</li>
+                        <li><a target="_blank" rel="noreferrer" href="https://www.instagram.com"><i
+                                    class="fa-brands fa-instagram followicon"></i></a></li>
+                        <li><a target="_blank" rel="noreferrer" href="https://www.facebook.com"><i
+                                    class="fa-brands fa-facebook followicon"></i></a></li>
+                        <li><a target="_blank" rel="noreferrer" href="https://www.twitter.com"><i
+                                    class="fa-brands fa-twitter followicon"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 c5 mb-md-0 mb-3">
+                    <h4 class="text-deco"><span>Services</span></h4>
+                    <ul class="pt-0 list-unstyled">
+                        <li>Tax & Identity</li>
+                        <li>Business Compliance</li>
+                        <li>Banking & EPF</li>
+                        <li>Income Tax Return</li>
+                        <li>Jobs & Travel</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 c5 mb-md-0 mb-3">
+                    <h4 class="text-deco"><span>Useful Links</span></h4>
+                    <ul class="pt-0 list-unstyled">
+                        <li><a href="./about.html" data-discover="true">About us </a></li>
+                        <li><a href="./services.html" data-discover="true">Our Services</a></li>
+                        <li><a href="./contact.html" data-discover="true">Contact us</a></li> 
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 c5 mb-md-0 mb-3">
+                    <h4 class="text-deco"><span>Contact us</span> </h4>
+                    <ul class="pt-0 list-unstyled">
+                        <li class="d-flex gap-2 align-items-start"><i class="fa-solid fa-phone mt-2"></i><a
+                                href="tel:9106532035">9106532035</a></li>
+                        <li class="d-flex gap-2 align-items-start"><i class="fa-solid fa-envelope mt-2"></i><a
+                                href="mailto:vrcs.desk@gmail.com">vrcs.desk@gmail.com</a></li>
+                        <li class="d-flex gap-2 align-items-start"><i
+                                class="fa-solid fa-location-pin mt-2"></i><span>226,1st floor, Opp. Rajasthan Patrika
+                                Office, Manji Ka Hatha, Paota, Jodhpur, Rajasthan - 342001</span></li>
+                    </ul>
+                </div>
+                <div class="row"><span class="back-to-top text-end d-none"><i class="fa-solid fa-arrow-up"></i></span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 ">
+                        <p class="pt-3">Copyright © 2025. All rights reserved.</p>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <p class="pt-3 text-end">Delvelop By : <a rel="noreferrer" class=""
+                                href="#">Team@VRCS </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Toastify"></div>
+    </div>
+</body>
+
+</html>

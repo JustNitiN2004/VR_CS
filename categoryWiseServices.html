@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./app/storage/application/VRCS_favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VR Consultancy and Services</title>
+
+    <link meta="icon" rel="apple-touch-icon" sizes="180x180" href="">
+    <link meta="icon" rel="icon" type="image/png" sizes="32x32" href="">
+    <link meta="icon" rel="icon" type="image/png" sizes="16x16" href="">
+    <link meta="icon" rel="shortcut icon" type="image/x-icon" href="">
+    <meta name="theme-color" content="#000000" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" crossorigin src="./assets/index-6NHkQpqh.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bh76j7cs.css">
+    <style>
+        .contactback {
+            margin-top: 0px !important;
+        }
+    </style>
+</head>
+<script>
+    // 1. Data Object: Grouping your 17+ services logically
+    const categoryData = {
+        "tax-identity": {
+            title: "Tax & Identity Services",
+            services: [
+                { name: "NSDL PAN Card", desc: "New application, corrections, and Physical/Digital card reprints.", img: "pan.png" },
+                { name: "Aadhaar-PAN Linking", desc: "Official government linking to keep your tax profile active.", img: "link.png" },
+                { name: "Voting Card", desc: "Registration for new voters and updates to existing ID cards.", img: "voter.png" },
+                { name: "ITR Filing", desc: "Professional tax filing for individuals, retailers, and businesses.", img: "itr.png" },
+                { name: "Passport Application", desc: "Complete assistance for Fresh and Re-issue Passport cases.", img: "passport.png" }
+            ]
+        },
+        "business-compliance": {
+            title: "Business & GST Solutions",
+            services: [
+                { name: "New GST Registration", desc: "Get your GSTIN quickly for your business or proprietorship.", img: "gst.png" },
+                { name: "GST Return Filing", desc: "Monthly/Quarterly GSTR-1 and GSTR-3B compliance.", img: "gst_return.png" },
+                { name: "MSME Registration", desc: "Udyam registration to avail government subsidies and loans.", img: "msme.png" },
+                { name: "Food License (FSSAI)", desc: "Mandatory licensing for food stalls, restaurants, and manufacturers.", img: "fssai.png" },
+                { name: "Digital Signature (DSC)", desc: "Class 3 DSC for tenders, GST, and Income Tax portals.", img: "dsc.png" }
+            ]
+        },
+        "banking-epf": {
+            title: "Banking & EPFO Services",
+            services: [
+                { name: "NSDL Account Opening ID", desc: "Become a retailer and open NSDL Payment Bank accounts.", img: "nsdl_bank.png" },
+                { name: "BOB Account Opening", desc: "Assistance with Bank of Baroda Savings/Current accounts.", img: "bob.png" },
+                { name: "EPFO Withdrawal", desc: "Claims for PF Final Settlement and Pension withdrawal.", img: "epf_withdraw.png" },
+                { name: "PF Transfer & KYC", desc: "Updating UAN details and merging old PF accounts.", img: "pf_kyc.png" }
+            ]
+        },
+        "jobs-travel": {
+            title: "Jobs, Travel & Licenses",
+            services: [
+                { name: "Job Search Consultancy", desc: "Connecting job seekers with local and government opportunities.", img: "jobs.png" },
+                { name: "Visa Application", desc: "Documentation for Tourist, Work, and Student visas worldwide.", img: "visa.png" },
+                { name: "Driving License", desc: "Learner's, Permanent, and Renewal license assistance.", img: "dl.png" },
+                { name: "Document Attestation", desc: "Notary and government attestation for legal documents.", img: "attest.png" },
+                { name: "Resume Building", desc: "Professional CV creation tailored for government and private sectors.", img: "resume.png" }
+            ]
+        }
+    };
+
+    // 2. The Function to render the page
+    function renderCategoryServices() {
+        const container = document.getElementById('services-container');
+        const titleElement = document.getElementById('page-title');
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoryKey = urlParams.get('cat');
+        const data = categoryData[categoryKey];
+
+        if (data) {
+            titleElement.innerText = data.title;
+            let htmlContent = '';
+
+            data.services.forEach(item => {
+                htmlContent += `
+            <div class="col-12 mb-5"> <div class="service-feature-card">
+                    <div class="img-side">
+                        <img src="./app/storage/services/${item.img}" alt="${item.name}">
+                    </div>
+                    <div class="content-side">
+                        <span class="badge bg-light text-primary mb-2 w-25">Official Service</span>
+                        <h4>${item.name}</h4>
+                        <p>${item.desc}</p>
+                        <div class="d-flex gap-3">
+                            <a href="https://wa.me/919106532035?text=I%20am%20interested%20in%20${item.name}" class="btn btn-primary px-5 py-2 fw-bold">
+                                Enquire Now
+                            </a>
+                             
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+            });
+            container.innerHTML = htmlContent;
+        } else {
+            container.innerHTML = `<div class="col-12 text-center py-5"><h3>Category Not Found</h3></div>`;
+        }
+    }
+    // Execute when the page is ready
+    document.addEventListener('DOMContentLoaded', renderCategoryServices);
+</script>
+
+<body>
+    <div id="root">
+        <main>
+            <section class="contact-us bg-dark contactback">
+                <div class="container-fluid banner-breadcrumb">
+                    <div class="col-12 text-center">
+                        <h3 class="text-white">Our Services</h3>
+                    </div>
+                    <div class="col-12 text-center"><img src="img/line.png" alt="" class="pt-2"></div>
+                    <div class="col-12 mt-3">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb d-flex justify-content-center">
+                                <li class="breadcrumb-item"><a class="orange text-decoration-none" href="/index.html"
+                                        data-discover="true">Home</a></li>
+                                <li class="breadcrumb-item active text-white" aria-current="page">Category Wise Services
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container-lg">
+                    
+                    <section class="services mt-5">
+                        <div class="container">
+                            <div class="row">
+
+
+                                <div class="container mt-5">
+                                    <div
+                                        class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
+                                        <h2 id="page-title" class="fw-bold m-0">Services</h2>
+                                        <a href="services.html" class="btn btn-outline-secondary btn-sm">← Back to
+                                            Categories</a>
+                                    </div>
+
+                                    <div id="services-container" class="row">
+                                        <div class="col-12 text-center py-5">
+                                            <div class="spinner-border text-primary" role="status">
+                                                <span class="visually-hidden">Loading...</span>
+                                            </div>
+                                            <p class="mt-2 text-muted">Fetching services...</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+        <div class="container-fluid">
+            <div class="row bg-footer text-white  myborder p-lg-5 p-md-4 p-4 ps-2 myfooter">
+                <div class="col-lg-3 col-md-6 col-12"><img src="./app/storage/application/VRCS_Footer_Logo2.png"
+                        alt="Adiyogi Fintech" class="imgclass">
+                    <p class="footer-logo-text"> </p><br>
+                    <ul class="d-flex align-items-center ulc1 p-0">
+                        <li>Follow us</li>
+                        <li><a target="_blank" rel="noreferrer" href="https://www.instagram.com"><i
+                                    class="fa-brands fa-instagram followicon"></i></a></li>
+                        <li><a target="_blank" rel="noreferrer" href="https://www.facebook.com"><i
+                                    class="fa-brands fa-facebook followicon"></i></a></li>
+                        <li><a target="_blank" rel="noreferrer" href="https://www.twitter.com"><i
+                                    class="fa-brands fa-twitter followicon"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 c5 mb-md-0 mb-3">
+                    <h4 class="text-deco"><span>Services</span></h4>
+                    <ul class="pt-0 list-unstyled">
+                        <li>Tax & Identity</li>
+                        <li>Business Compliance</li>
+                        <li>Banking & EPF</li>
+                        <li>Income Tax Return</li>
+                        <li>Jobs & Travel</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 c5 mb-md-0 mb-3">
+                    <h4 class="text-deco"><span>Useful Links</span></h4>
+                    <ul class="pt-0 list-unstyled">
+                        <li><a href="./about.html" data-discover="true">About us </a></li>
+                        <li><a href="./services.html" data-discover="true">Our Services</a></li>
+                        <li><a href="./contact.html" data-discover="true">Contact us</a></li> 
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 c5 mb-md-0 mb-3">
+                    <h4 class="text-deco"><span>Contact us</span> </h4>
+                    <ul class="pt-0 list-unstyled">
+                        <li class="d-flex gap-2 align-items-start"><i class="fa-solid fa-phone mt-2"></i><a
+                                href="tel:9106532035">9106532035</a></li>
+                        <li class="d-flex gap-2 align-items-start"><i class="fa-solid fa-envelope mt-2"></i><a
+                                href="mailto:vrcs.desk@gmail.com">vrcs.desk@gmail.com</a></li>
+                        <li class="d-flex gap-2 align-items-start"><i
+                                class="fa-solid fa-location-pin mt-2"></i><span>226,1st floor, Opp. Rajasthan Patrika
+                                Office, Manji Ka Hatha, Paota, Jodhpur, Rajasthan - 342001</span></li>
+                    </ul>
+                </div>
+                <div class="row"><span class="back-to-top text-end d-none"><i class="fa-solid fa-arrow-up"></i></span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 ">
+                        <p class="pt-3">Copyright © 2025. All rights reserved.</p>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <p class="pt-3 text-end">Delvelop By : <a rel="noreferrer" class=""
+                                href="#">Team@VRCS </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Toastify"></div>
+    </div>
+</body>
+
+</html>
