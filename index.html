@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/all.min.css" />
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modern-nav-footer.css">
+    <link rel="stylesheet" href="./css/whatsapp-float.css">
+    <link rel="stylesheet" href="./css/contact-modal.css">
     <script type="module" crossorigin src="./assets/index-6NHkQpqh.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-Bh76j7cs.css">
@@ -24,19 +27,19 @@
 
 <body>
     <div id="root">
-        <nav class="navbar navbar-expand-md navbar-light fixed-top py-0">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0 modern-navbar">
             <div class="container-lg">
 
                 <!-- Logo -->
                 <a class="navbar-brand pe-4" href="./index.html">
-                    <img src="./app/storage/application/VRCS_logo.png" alt="VRC&S" style="min-width:135px;">
+                    <img src="./app/storage/application/VRCS_logo_2.png" alt="VRC&S" style="min-width:135px; filter: brightness(1.6)" >
                 </a>
 
                 <!-- Mobile icons + toggle -->
                 <div class="d-flex d-md-none align-items-center gap-4 ms-auto">
                      
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#responsive-navbar-nav" aria-controls="responsive-navbar-nav"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -48,10 +51,10 @@
 
                     <!-- Menu -->
                     <div class="navbar-nav me-auto gap-md-4">
-                        <a class="nav-link active" href="./index.html">Home</a>
-                        <a class="nav-link" href="./about.html">About us</a>
-                        <a class="nav-link" href="./services.html">Our Services</a>
-                        <a class="nav-link" href="./contact.html">Contact</a>
+                        <a class="nav-link active modern-nav-link" href="./index.html">Home</a>
+                        <a class="nav-link modern-nav-link" href="./about.html">About us</a>
+                        <a class="nav-link modern-nav-link" href="./services.html">Our Services</a>
+                        <a class="nav-link modern-nav-link" href="./contact.html">Contact</a>
                     </div>
 
                     <!-- Buttons -->
@@ -86,22 +89,26 @@
                                 <!-- Slides -->
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100" src="./app/storage/sliders/1692689989_3933.jpg"
+                                        <img class="d-block w-100" src="./img/carousal/vahical_card.jpg"
                                             alt="PanCard Service">
+                                        <div class="carousel-caption">
+                                            <h2>PAN Card Services</h2>
+                                            <p>Fast and Reliable PAN Card Application</p>
+                                        </div>
                                     </div>
 
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="./app/storage/sliders/1692690011_7004.jpg"
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="./img/carousal/CARDS_1.jpg"
                                             alt="Get your PanCard">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="./app/storage/sliders/1692690017_5974.jpg"
+                                        <img class="d-block w-100" src="./img/carousal/ITR_1.jpg""
                                             alt="eFiling Income Tax Return">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="./app/storage/sliders/1694690256_8807.jpg"
+                                        <img class="d-block w-100" src="./img/carousal/travel_1.jpg"
                                             alt="Credit Card Coming Soon">
                                     </div>
                                 </div>
@@ -124,246 +131,344 @@
                     </div>
                 </div>
 
-                <div class="container-lg mt-4">
-                    <div class="row mt-lg-5 ms-lg-3 me-lg-3">
-                        <div class="col-lg-4 col-md-4 mt-2">
-                            <div class="payment p-3">
-                                <img src="img/payment.jpg" alt="">
-                                <div class="d-flex flex-column ps-3">
-                                    <h6 class="head">Secure Payments</h6>
-                                    <div class="description">
-                                        100% Secure Payment and Wallet.</div>
+                <!-- Modern Features Section -->
+                <section class="modern-dark-section py-5">
+                    <div class="container-lg">
+                        <div class="modern-section-header">
+                            <h2>Why Choose Us</h2>
+                            <p>Experience excellence with our premium services</p>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="glass-card float-animation text-center">
+                                    <div class="mb-4">
+                                        <img src="img/payment.jpg" alt="Secure Payments" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                                    </div>
+                                    <h3 class="modern-title">Secure Payments</h3>
+                                    <p class="modern-description">
+                                        100% Secure Payment and Wallet. Your financial safety is our top priority.
+                                    </p>
+                                     
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 mt-2">
-                            <div class="payment p-3">
-                                <img src="img/fastService.jpg" alt="">
-                                <div class="d-flex flex-column ps-3">
-                                    <h6 class="head">Fast Service</h6>
-                                    <div class="description">
-                                        Fast and Quality Service Provider.
+                            <div class="col-lg-4 col-md-6">
+                                <div class="glass-card float-animation text-center">
+                                    <div class="mb-4">
+                                        <img src="img/fastService.jpg" alt="Fast Service" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
                                     </div>
+                                    <h3 class="modern-title">Fast Service</h3>
+                                    <p class="modern-description">
+                                        Fast and Quality Service Provider. We value your time and deliver excellence.
+                                    </p> 
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 mt-2">
-                            <div class="payment p-3">
-                                <img src="img/support.jpg" alt="">
-                                <div class="d-flex flex-column ps-3">
-                                    <h6 class="head">Support</h6>
-                                    <div class="description">
-                                        We are here to help. Have a query and need help ?
+                            <div class="col-lg-4 col-md-6">
+                                <div class="glass-card float-animation text-center">
+                                    <div class="mb-4">
+                                        <img src="img/support.jpg" alt="Support" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-lg mt-4 my-4">
-                    <div class="row">
-                        <div class="col-lg-6 d-flex justify-content-center align-items-center ">
-                            <img src="img/person.jpg" alt="" classname="w-75"
-                                style="max-width: 300px;border-radius: 50px; margin-top: 20px;">
-                        </div>
-                        <div class="col-lg-6">
-                            <h3 class="m-0 fw-bold border-start border-4 border-primary ps-3 my-4">About us</h3>
-                            <p class="text-justify">
-                                At VR Consultancy & Services, we believe navigating government documentation should be
-                                seamless, not stressful. With over three years of dedicated expertise, we have become
-                                Navsari’s premier destination for comprehensive consultancy and job search solutions.
-                                Our journey is built on a foundation of trust, having successfully served a growing
-                                community of 500+ satisfied customers.
-
-                                Since government regulations are constantly in flux, our core strength lies in our
-                                real-time adaptability. Our smart and agile team proactively monitors every update,
-                                ensuring your applications for GST, ITR, PAN, or EPFO are always compliant with the
-                                latest legal frameworks. Whether you are an individual seeking a passport or a business
-                                owner managing complex tax returns, we bring precision and speed to every task. Our goal
-                                is to bridge the gap between complex official procedures and the people who need them.
-                                At VR Consultancy, we handle the paperwork so you can focus on what matters most.
-                            </p>
-                            <a href="./about.html"><button class="btn btncolor2">Read More</button></a>
-                        </div>
-                    </div>
-                </div>
-                <section class="services mt-4 my-4">
-                    <div class="container">
-                        <div class="col-12 mb-4">
-                            <h3 class="m-0 fw-bold border-start border-4 border-primary ps-3">Our Services</h3>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12 mb-4">
-                                <div class="service-feature-card shadow-sm">
-                                    <div class="img-wrapper">
-                                        <img src="./img/9.jpg" class="card-img-top" alt="Tax & Identity">
-                                    </div>
-                                    <div class="card-body p-4 text-center">
-                                        <h4 class="card-title fw-bold text-dark mb-3">Tax & Identity</h4>
-                                        <a class="btn btn-outline-primary px-4 py-2"
-                                            href="categoryWiseServices.html?cat=tax-identity">
-                                            Read More <i class="bi bi-arrow-right-short"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-12 mb-4">
-                                <div class="service-feature-card shadow-sm">
-                                    <div class="img-wrapper">
-                                        <img src="./img/meeting.jpg" class="card-img-top" alt="Business Compliance">
-                                    </div>
-                                    <div class="card-body p-4 text-center">
-                                        <h4 class="card-title fw-bold text-dark mb-3">Business Compliance</h4>
-                                        <a class="btn btn-outline-primary px-4 py-2"
-                                            href="categoryWiseServices.html?cat=business-compliance">
-                                            Read More <i class="bi bi-arrow-right-short"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-12 mb-4">
-                                <div class="service-feature-card shadow-sm">
-                                    <div class="img-wrapper">
-                                        <img src="./img/banking.jpg" class="card-img-top" alt="Banking & EPF">
-                                    </div>
-                                    <div class="card-body p-4 text-center">
-                                        <h4 class="card-title fw-bold text-dark mb-3">Banking & EPF</h4>
-                                        <a class="btn btn-outline-primary px-4 py-2"
-                                            href="categoryWiseServices.html?cat=banking-epf">
-                                            Read More <i class="bi bi-arrow-right-short"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-12 mb-4">
-                                <div class="service-feature-card shadow-sm">
-                                    <div class="img-wrapper">
-                                        <img src="./img/job.jpg" class="card-img-top" alt="Jobs & Travel">
-                                    </div>
-                                    <div class="card-body p-4 text-center">
-                                        <h4 class="card-title fw-bold text-dark mb-3">Jobs & Travel</h4>
-                                        <a class="btn btn-outline-primary px-4 py-2"
-                                            href="categoryWiseServices.html?cat=jobs-travel">
-                                            Read More <i class="bi bi-arrow-right-short"></i>
-                                        </a>
-                                    </div>
+                                    <h3 class="modern-title">24/7 Support</h3>
+                                    <p class="modern-description">
+                                        We are here to help. Have a query and need help? Our team is always ready.
+                                    </p> 
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <div class="container-lg mt-4">
-                    <div class="row quality-services">
-                        <div class="col-lg-6 col-md-6 col-md-3 p-4 text-column">
-                            <h4 class="fw-bold">Navsari’s Trusted Partner for Secure</h4>
-                            <h4 class="fw-bold"><span>&</span> Accurate Consultancy.</h4>
-                            <p class="text-justify">Built on a foundation of over 500 successful client relationships,
-                                we pride ourselves on being a reliable pillar for the Navsari community. We don’t just
-                                offer services; we offer a commitment to excellence that evolves alongside changing
-                                government standards. Trust our experienced team to handle your most sensitive
-                                documentation with the professional care it deserves.</p>
 
-                            <div class="text-center p-3">
-                                <div class="row bg-gray">
-                                    <div class="col-6 text-center pt-lg-3 pb-lg-3 borderr six">
-                                        <div class="py-3">
-                                            <h1 class="text-orange">3+</h1>
-                                            <p>years of experience Navsari</p>
+                <!-- Modern About Us Section -->
+                <section class="modern-dark-section py-5">
+                    <div class="container-lg">
+                        <div class="modern-section-header">
+                            <h2>About Us</h2>
+                            <p>Your trusted partner in consultancy and services</p>
+                        </div>
+                        <div class="row align-items-center g-5">
+                            <div class="col-lg-6 d-flex justify-content-center">
+                                <div class="glass-card float-animation p-4">
+                                    <img src="img/person.jpg" alt="VR Consultancy" class="w-100"
+                                        style="border-radius: 30px; object-fit: cover;">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="glass-card float-animation">
+                                    <h3 class="modern-title mb-4">Who We Are</h3>
+                                    <p class="modern-description" style="text-align: justify;">
+                                        At VR Consultancy & Services, we believe navigating government documentation should be
+                                        seamless, not stressful. With over three years of dedicated expertise, we have become
+                                        Navsari's premier destination for comprehensive consultancy and job search solutions.
+                                        Our journey is built on a foundation of trust, having successfully served a growing
+                                        community of 500+ satisfied customers.
+                                    </p>
+                                    <p class="modern-description" style="text-align: justify;">
+                                        Since government regulations are constantly in flux, our core strength lies in our
+                                        real-time adaptability. Our smart and agile team proactively monitors every update,
+                                        ensuring your applications for GST, ITR, PAN, or EPFO are always compliant with the
+                                        latest legal frameworks. Whether you are an individual seeking a passport or a business
+                                        owner managing complex tax returns, we bring precision and speed to every task. Our goal
+                                        is to bridge the gap between complex official procedures and the people who need them.
+                                        At VR Consultancy, we handle the paperwork so you can focus on what matters most.
+                                    </p>
+                                    <a href="./about.html" class="btn-modern">
+                                        Read More <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Modern Services Section -->
+                <section class="modern-dark-section py-5">
+                    <div class="container">
+                        <div class="modern-section-header">
+                            <h2>Our Services</h2>
+                            <p>Comprehensive solutions for all your documentation needs</p>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <div class="glass-card float-animation">
+                                    <h3 class="modern-title"><i class="fa fa-id-card me-2"></i> Tax & Identity Services</h3>
+                                    <p class="modern-description">
+                                        PAN Card applications, Aadhaar-PAN linking, Voter ID registration, ITR filing, and Passport assistance.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="glass-card float-animation">
+                                    <h3 class="modern-title"><i class="fa fa-briefcase me-2"></i> Business Compliance</h3>
+                                    <p class="modern-description">
+                                        GST registration and return filing, MSME (Udyam) registration, FSSAI food licenses, and Digital Signature certificates.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="glass-card float-animation">
+                                    <h3 class="modern-title"><i class="fa fa-university me-2"></i> Banking & EPF Services</h3>
+                                    <p class="modern-description">
+                                        NSDL and Bank of Baroda account openings, EPFO withdrawals, PF transfers, and KYC updates.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="glass-card float-animation">
+                                    <h3 class="modern-title"><i class="fa fa-plane me-2"></i> Jobs & Travel Solutions</h3>
+                                    <p class="modern-description">
+                                        Job search consultancy, visa applications for all countries, driving license services, document attestation, and professional resume building.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-5">
+                            <a href="./services.html" class="btn-modern px-5 py-3" style="font-size: 1.1rem;">
+                                View All Services <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Modern Statistics Section -->
+                <section class="modern-dark-section py-5">
+                    <div class="container-lg">
+                        <div class="row align-items-center g-5">
+                            <div class="col-lg-6">
+                                <div class="glass-card float-animation">
+                                    <h3 class="modern-title mb-4">Navsari's Trusted Partner for Secure & Accurate Consultancy</h3>
+                                    <p class="modern-description" style="text-align: justify;">
+                                        Built on a foundation of over 500 successful client relationships,
+                                        we pride ourselves on being a reliable pillar for the Navsari community. We don't just
+                                        offer services; we offer a commitment to excellence that evolves alongside changing
+                                        government standards. Trust our experienced team to handle your most sensitive
+                                        documentation with the professional care it deserves.
+                                    </p>
+                                    
+                                    <div class="row g-3 mt-4">
+                                        <div class="col-6">
+                                            <div class="glass-card text-center" style="background: rgba(0, 210, 255, 0.1);">
+                                                <h2 style="color: #00d2ff; font-weight: 800; font-size: 2.5rem; margin-bottom: 10px;">3+</h2>
+                                                <p class="modern-description" style="margin: 0; font-size: 0.85rem;">Years in Navsari</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-6 text-center pt-lg-3 pb-lg-3 borderb six">
-                                        <div class="py-3">
-                                            <h1 class="text-orange">5+</h1>
-                                            <p>years of experience in this field</p>
+                                        <div class="col-6">
+                                            <div class="glass-card text-center" style="background: rgba(0, 210, 255, 0.1);">
+                                                <h2 style="color: #00d2ff; font-weight: 800; font-size: 2.5rem; margin-bottom: 10px;">5+</h2>
+                                                <p class="modern-description" style="margin: 0; font-size: 0.85rem;">Years Experience</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-6 text-center pt-lg-3 pb-lg-3 bordert six">
-                                        <div class="py-3">
-                                            <h1 class="text-orange">500+</h1>
-                                            <p>Clients Served</p>
+                                        <div class="col-6">
+                                            <div class="glass-card text-center" style="background: rgba(0, 210, 255, 0.1);">
+                                                <h2 style="color: #00d2ff; font-weight: 800; font-size: 2.5rem; margin-bottom: 10px;">500+</h2>
+                                                <p class="modern-description" style="margin: 0; font-size: 0.85rem;">Clients Served</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-6 text-center pt-lg-3 pb-lg-3 borderl six">
-                                        <div class="py-3">
-                                            <h1 class="text-orange">100%</h1>
-                                            <p>Client Satisfaction</p>
+                                        <div class="col-6">
+                                            <div class="glass-card text-center" style="background: rgba(0, 210, 255, 0.1);">
+                                                <h2 style="color: #00d2ff; font-weight: 800; font-size: 2.5rem; margin-bottom: 10px;">100%</h2>
+                                                <p class="modern-description" style="margin: 0; font-size: 0.85rem;">Satisfaction</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 d-flex justify-content-center p-4">
-                            <img src="./img/4.jpg" alt="" class="w-100">
+                            <div class="col-lg-6 d-flex justify-content-center">
+                                <div class="glass-card float-animation p-4">
+                                    <img src="./img/4.jpg" alt="Quality Services" class="w-100" style="border-radius: 30px; object-fit: cover;">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </main>
-        <div class="container-fluid">
-            <div class="row bg-footer text-white  myborder p-lg-5 p-md-4 p-4 ps-2 myfooter">
-                <div class="col-lg-3 col-md-6 col-12"><img src="./app/storage/application/VRCS_Footer_Logo2.png"
-                        alt="Adiyogi Fintech" class="imgclass">
-                    <p class="footer-logo-text"> </p><br>
-                    <ul class="d-flex align-items-center ulc1 p-0">
-                        <li>Follow us</li>
-                        <li><a target="_blank" rel="noreferrer" href="https://www.instagram.com"><i
-                                    class="fa-brands fa-instagram followicon"></i></a></li>
-                        <li><a target="_blank" rel="noreferrer" href="https://www.facebook.com"><i
-                                    class="fa-brands fa-facebook followicon"></i></a></li>
-                        <li><a target="_blank" rel="noreferrer" href="https://www.twitter.com"><i
-                                    class="fa-brands fa-twitter followicon"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 c5 mb-md-0 mb-3">
-                    <h4 class="text-deco"><span>Services</span></h4>
-                    <ul class="pt-0 list-unstyled">
-                        <li>Tax & Identity</li>
-                        <li>Business Compliance</li>
-                        <li>Banking & EPF</li>
-                        <li>Income Tax Return</li>
-                        <li>Jobs & Travel</li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 c5 mb-md-0 mb-3">
-                    <h4 class="text-deco"><span>Useful Links</span></h4>
-                    <ul class="pt-0 list-unstyled">
-                        <li><a href="./about.html" data-discover="true">About us </a></li>
-                        <li><a href="./services.html" data-discover="true">Our Services</a></li>
-                        <li><a href="./contact.html" data-discover="true">Contact us</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 c5 mb-md-0 mb-3">
-                    <h4 class="text-deco"><span>Contact us</span> </h4>
-                    <ul class="pt-0 list-unstyled">
-                        <li class="d-flex gap-2 align-items-start"><i class="fa-solid fa-phone mt-2"></i><a
-                                href="tel:9106532035">9106532035</a></li>
-                        <li class="d-flex gap-2 align-items-start"><i class="fa-solid fa-envelope mt-2"></i><a
-                                href="mailto:vrcs.desk@gmail.com">vrcs.desk@gmail.com</a></li>
-                        <li class="d-flex gap-2 align-items-start"><i
-                                class="fa-solid fa-location-pin mt-2"></i><span>Jay Shree Ram GST Suvidha Kendra,Near Lilaben Papad...</span></li>
-                    </ul>
-                </div>
-                <div class="row"><span class="back-to-top text-end d-none"><i class="fa-solid fa-arrow-up"></i></span>
+        <footer class="modern-footer">
+            <div class="container-lg py-5">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="footer-brand mb-4">
+                            <img src="./app/storage/application/VRCS_Footer_Logo_2.png"
+                                alt="VR Consultancy" class="footer-logo">
+                        </div>
+                        <div class="footer-social">
+                            <p class="mb-3" style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">Follow us</p>
+                            <div class="d-flex gap-3">
+                                <a target="_blank" rel="noreferrer" href="https://www.instagram.com" class="modern-social-icon">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a target="_blank" rel="noreferrer" href="https://www.facebook.com" class="modern-social-icon">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a target="_blank" rel="noreferrer" href="https://www.twitter.com" class="modern-social-icon">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <h4 class="footer-heading">Services</h4>
+                        <ul class="footer-links">
+                            <li><i class="fa fa-chevron-right"></i> Tax & Identity</li>
+                            <li><i class="fa fa-chevron-right"></i> Business Compliance</li>
+                            <li><i class="fa fa-chevron-right"></i> Banking & EPF</li>
+                            <li><i class="fa fa-chevron-right"></i> Income Tax Return</li>
+                            <li><i class="fa fa-chevron-right"></i> Jobs & Travel</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <h4 class="footer-heading">Useful Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="./about.html"><i class="fa fa-chevron-right"></i> About us</a></li>
+                            <li><a href="./services.html"><i class="fa fa-chevron-right"></i> Our Services</a></li>
+                            <li><a href="./contact.html"><i class="fa fa-chevron-right"></i> Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <h4 class="footer-heading">Contact us</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:9106532035">9106532035</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <a href="mailto:vrcs.desk@gmail.com">vrcs.desk@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-pin"></i>
+                                <span>Surya Nagar Main Road, Opp Lila Papad Vala Shope, Near Vithal Mandir, Vijalpore, Navsari, Gujarat 396445</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 ">
-                        <p class="pt-3">Copyright © 2025. All rights reserved.</p>
-                    </div>
-                    <div class="col-lg-6 ">
-                        <p class="pt-3 text-end">Delvelop By : <a rel="noreferrer" class=""
-                                href="#"  >Team@VRCS </a>
-                        </p>
+            <div class="footer-bottom">
+                <div class="container-lg">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-center text-md-start">
+                            <p class="mb-0">Copyright © 2025. All rights reserved.</p>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <p class="mb-0">Developed By: <a href="#" class="footer-link-highlight">Team@VRCS</a></p>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <span class="back-to-top d-none"><i class="fa-solid fa-arrow-up"></i></span>
+        </footer>
+        
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/919106532035" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <!-- Contact Modal -->
+        <div id="contactModal" class="contact-modal-overlay">
+            <div class="contact-modal">
+                <span class="contact-modal-close" onclick="closeContactModal()">&times;</span>
+                <h3>Quick Contact</h3>
+                <p>Have a question? Send us a message via WhatsApp!</p>
+                <form class="contact-modal-form" onsubmit="sendModalToWhatsApp(event)">
+                    <input type="text" id="modalName" placeholder="Your Name" required>
+                    <input type="email" id="modalEmail" placeholder="Your Email" required>
+                    <input type="tel" id="modalPhone" placeholder="Phone Number" required>
+                    <textarea id="modalMessage" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="contact-modal-submit">
+                        Send via WhatsApp <i class="fab fa-whatsapp"></i>
+                    </button>
+                </form>
             </div>
         </div>
+        
         <div class="Toastify"></div>
     </div>
+    
+    <script>
+        // Show modal after 20 seconds
+        setTimeout(function() {
+            // Check if modal was already shown in this session
+            if (!sessionStorage.getItem('contactModalShown')) {
+                document.getElementById('contactModal').classList.add('show');
+                sessionStorage.setItem('contactModalShown', 'true');
+            }
+        }, 10000); // 10 seconds
+        
+        // Close modal function
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.remove('show');
+        }
+        
+        // Close modal when clicking outside
+        document.addEventListener('click', function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target === modal) {
+                closeContactModal();
+            }
+        });
+        
+        // Send modal form to WhatsApp
+        function sendModalToWhatsApp(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('modalName').value;
+            const email = document.getElementById('modalEmail').value;
+            const phone = document.getElementById('modalPhone').value;
+            const message = document.getElementById('modalMessage').value;
+            
+            const whatsappNumber = '919106532035';
+            const whatsappMessage = `*Quick Contact Form*%0A%0A` +
+                                   `*Name:* ${encodeURIComponent(name)}%0A` +
+                                   `*Email:* ${encodeURIComponent(email)}%0A` +
+                                   `*Phone:* ${encodeURIComponent(phone)}%0A%0A` +
+                                   `*Message:*%0A${encodeURIComponent(message)}`;
+            
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+            window.open(whatsappURL, '_blank');
+            
+            closeContactModal();
+        }
+    </script>
+    
+    <script src="./assets/modern-theme.js"></script>
 </body>
 
 </html>
